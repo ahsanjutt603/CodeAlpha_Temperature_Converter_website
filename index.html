@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha-Temperature Convert</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg">
+    <main class="flex flex-col items-center ">
+        <!-- Image Section -->
+        <section>
+            <img src="https://www.pngkey.com/png/detail/297-2976588_temperature-conversion-convert-temperature-icon.png"
+                height="300px" width="500px">
+            <h1 class="text-5xl font-bold text-center text-[#175EA0]">Temperature Converter</h1>
+        </section>
+
+        <!-- Input Section -->
+        <section class="my-10 flex flex-col items-center space-y-8">
+            <div class="flex items-center space-x-4">
+                <label for="" class="text-xl font-semibold">Enter Temperature: </label>
+                <div class="">
+                    <input class="px-3 py-2 rounded-full border-2 border-[#175EA0] focus:outline-none" type="number"
+                        name="inputTemperature" id="inputTemperature" value="0">
+                    <select class="px-3 py-2 rounded-full border-2 border-[#175EA0] focus:outline-none"
+                        name="inputScale" id="inputScale">
+                        <option value="C">&deg;C</option>
+                        <option value="F">&deg;F</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center space-x-4" action="">
+                <label class="text-xl font-semibold">Convert To: </label>
+                <select class="px-20 py-2 rounded-md border-2 border-[#078AB8] focus:outline-none" name="convertScale"
+                    id="convertScale">
+                    <option value="F">&deg;F</option>
+                    <option value="C">&deg;C</option>
+                </select>
+            </div>
+
+            <div class="flex item-center space-x-4">
+                <input class="px-5 py-2 rounded-full bg-[#175EA0] text-white hover:bg-[#078AB8] " type="button"
+                    value="Convert" onclick="Temperature_Convert()">
+
+                <input class="px-5 py-2 rounded-full bg-red-500 text-white hover:bg-red-600" type="button" value="Reset"
+                    onclick="resetFields()">
+            </div>
+        </section>
+
+        <!-- Output Section -->
+        <section>
+            <div class="">
+                <h2 class="text-3xl font-bold" id="convertedTempResult"></h2>
+            </div>
+        </section>
+        <script src="./script.js"></script>
+    </main>
+</body>
+
+</html>
